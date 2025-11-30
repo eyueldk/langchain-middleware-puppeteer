@@ -1,13 +1,13 @@
-# @crawlmachine/langchain-puppeteer-middleware
+# langchain-puppeteer-middleware
 
 A LangChain middleware that provides Puppeteer browser automation tools for AI agents. This package allows AI agents to interact with web pages through a set of browser automation tools.
 
 ## Installation
 
 ```bash
-npm install @crawlmachine/langchain-puppeteer-middleware langchain puppeteer
+npm install langchain-puppeteer-middleware langchain puppeteer
 # or
-bun install @crawlmachine/langchain-puppeteer-middleware langchain puppeteer
+bun install langchain-puppeteer-middleware langchain puppeteer
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ bun install @crawlmachine/langchain-puppeteer-middleware langchain puppeteer
 import { createAgent } from "langchain";
 import { launch } from "puppeteer";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { createPuppeteerMiddleware } from "@crawlmachine/langchain-puppeteer-middleware";
+import { createPuppeteerMiddleware } from "langchain-puppeteer-middleware";
 
 // Launch a Puppeteer browser
 const browser = await launch({ headless: false });
@@ -71,22 +71,14 @@ const agent = createAgent({
 
 The middleware provides the following tools:
 
-### Navigation & Interaction
-
 - **`goto`** - Navigate to a URL in the current browsing session
 - **`click`** - Click an element using a CSS selector
 - **`type`** - Type text into an input element using a CSS selector
 - **`evaluate`** - Execute JavaScript code in the browsing session context
-
-### Page Inspection
-
 - **`viewPage`** - View the current browsing session in a simplified form containing only 'interesting' elements
 - **`inspectHTML`** - Inspect the outer HTML of a specific element or the entire page
 - **`inspectConsole`** - Retrieve console logs from the current browsing session
 - **`inspectNetwork`** - Inspect network logs of the current session
-
-### Data & State
-
 - **`getCookies`** - Return cookies for the current session as a JSON string
 - **`getScreenshot`** - Take a screenshot of the current browsing session
 
