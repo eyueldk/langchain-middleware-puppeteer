@@ -1,13 +1,13 @@
-# langchain-puppeteer-middleware
+# langchain-middleware-puppeteer
 
 A LangChain middleware that provides Puppeteer browser automation tools for AI agents. This package allows AI agents to interact with web pages through a set of browser automation tools.
 
 ## Installation
 
 ```bash
-npm install langchain-puppeteer-middleware langchain puppeteer
+npm install langchain-middleware-puppeteer langchain puppeteer
 # or
-bun install langchain-puppeteer-middleware langchain puppeteer
+bun install langchain-middleware-puppeteer langchain puppeteer
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ bun install langchain-puppeteer-middleware langchain puppeteer
 import { createAgent } from "langchain";
 import { launch } from "puppeteer";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { createPuppeteerMiddleware } from "langchain-puppeteer-middleware";
+import { createPuppeteerMiddleware } from "langchain-middleware-puppeteer";
 
 // Launch a Puppeteer browser
 const browser = await launch({ headless: false });

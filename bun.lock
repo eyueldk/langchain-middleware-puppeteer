@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@crawlmachine/langchain-puppeteer-middleware",
+      "name": "langchain-middleware-puppeteer",
       "devDependencies": {
         "@langchain/google-genai": "^2.0.0",
         "@types/bun": "latest",
@@ -10,8 +10,8 @@
         "tsdown": "^0.17.0-beta.4",
       },
       "peerDependencies": {
-        "langchain": "^1.1.1",
-        "puppeteer": "^24.31.0",
+        "langchain": "*",
+        "puppeteer": "*",
         "typescript": "^5",
       },
     },
